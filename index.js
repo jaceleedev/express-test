@@ -1,9 +1,11 @@
 import express from "express";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-/*
 app.get("/", (req, res) => {
   res.send("Hello from Hitesh and his tea!");
 });
@@ -15,7 +17,6 @@ app.get("/ice-tea", (req, res) => {
 app.get("/twitter", (req, res) => {
   res.send("hiteshdotcom");
 });
-*/
 
 app.use(express.json());
 
